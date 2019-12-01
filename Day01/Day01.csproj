@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B02595E6-3B23-43F7-80AD-8056FAC2AFE3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day01</RootNamespace>
+    <RootNamespace>AdventOfCode2019</RootNamespace>
     <AssemblyName>Day01</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,8 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="input.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{ef479134-8433-46af-8160-7fe8a940570d}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
