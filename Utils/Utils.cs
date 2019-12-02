@@ -31,9 +31,20 @@ namespace AdventOfCode2019
             Console.ResetColor();
         }
 
-        public static IEnumerable<Int32> ReadAsInt(string v)
+        public static void Wait()
+        {            
+            Console.WriteLine("Press any key...");
+            Console.ReadKey();         
+        }
+
+        public static IEnumerable<Int32> ReadInputAsIntLines(string filename = "input.txt")
         {
-            return from q in File.ReadAllLines("input.txt") select Convert.ToInt32(q);
+            return from q in File.ReadAllLines(filename) select Convert.ToInt32(q);
+        }
+
+        public static IEnumerable<Int32> ReadInputAsIntArray(string filename = "input.txt")
+        {
+            return from q in File.ReadAllText(filename).Split(',') select Convert.ToInt32(q);
         }
     }
 }

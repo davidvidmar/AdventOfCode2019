@@ -19,7 +19,7 @@ namespace AdventOfCode2019
             // For a mass of 100756, the fuel required is 33583
             Console.WriteLine($"100756 -> {CalculateFuel(100756)} = 33583");
 
-            var input = Utils.ReadAsInt("input.txt");
+            var input = Utils.ReadInputAsIntLines();
 
             var sum = 0;
             foreach (var i in input)
@@ -44,8 +44,7 @@ namespace AdventOfCode2019
 
             Utils.WriteResult(sum2);
 
-            Console.WriteLine("Press any key to continue..."); 
-            Console.ReadKey();
+            Utils.Wait();            
         }
 
         // Fuel required to launch a given module is based on its mass. 
