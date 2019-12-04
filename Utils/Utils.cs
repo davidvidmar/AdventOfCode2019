@@ -46,5 +46,10 @@ namespace AdventOfCode2019
         {
             return from q in File.ReadAllText(filename).Split(',') select Convert.ToInt32(q);
         }
+
+        public static IEnumerable<string[]> ReadInputAsStringArrays(string filename = "input.txt")
+        {
+            return from q in File.ReadAllLines(filename) select q.Split(',');
+        }
     }
 }
